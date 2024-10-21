@@ -38,7 +38,7 @@ def query_openai(prompt, max_completion_tokens=None):
 # Number of test cases to run for each configuration
 num_tests = 300
 
-#d = torch.load('token_counts_mult.pt')
+#d = torch.load('data/token_counts_mult.pt')
 #tokens_no_limit = d['tokens_no_limit']
 #tokens_max_193 = d['tokens_max_193']
 
@@ -58,9 +58,9 @@ if GENERATE:
         if reasoning_tokens is not None:
             tokens_max_193.append(reasoning_tokens)
     
-    torch.save({'tokens_no_limit': tokens_no_limit, 'tokens_max_193': tokens_max_193}, 'token_counts_mult.pt')
+    torch.save({'tokens_no_limit': tokens_no_limit, 'tokens_max_193': tokens_max_193}, 'data/token_counts_mult.pt')
 else:
-    d = torch.load('token_counts_mult.pt')
+    d = torch.load('data/token_counts_mult.pt')
     tokens_no_limit = d['tokens_no_limit']
     tokens_max_193 = d['tokens_max_193']
 

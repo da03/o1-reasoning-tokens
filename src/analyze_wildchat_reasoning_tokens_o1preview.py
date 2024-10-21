@@ -43,7 +43,7 @@ def plot_frequency_distribution(tokens_list, a):
     plt.savefig(f'counts_o1preview_wildchat.png')
 
 def main():
-    reasoning_tokens_all = torch.load('reasoning_tokens_o1preview.pt')
+    reasoning_tokens_all = torch.load('data/reasoning_tokens_o1preview.pt')
     reasoning_tokens_all = [item for item in reasoning_tokens_all if item < 1024]
     print (len(reasoning_tokens_all))
     plot_frequency_distribution(reasoning_tokens_all, len(reasoning_tokens_all))
