@@ -73,7 +73,6 @@ def plot_frequency_distribution(tokens_list_1, tokens_list_3):
     # Get unique token values and their frequencies
     unique_values_1, counts_1 = np.unique(tokens_list_1, return_counts=True)
     unique_values_3, counts_3 = np.unique(tokens_list_3, return_counts=True)
-    #import pdb; pdb.set_trace()
 
     # Plot for no max_completion_tokens
     sns.scatterplot(x=unique_values_1, y=counts_1, s=200, marker='s', color='blue', label='No Limit')
